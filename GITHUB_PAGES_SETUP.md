@@ -13,7 +13,7 @@
 
 1. Gehe zu [GitHub.com](https://github.com) und logge dich ein
 2. Klicke auf "New Repository" (grüner Button)
-3. Repository-Name: `ep2_9` (oder einen anderen Namen)
+3. Repository-Name: `test-nice-gui`
 4. Beschreibung: `Hello World NiceGUI Web App`
 5. Wähle "Private" oder "Public" je nach Bedarf
 6. **Wichtig:** Haken Sie NICHT an:
@@ -29,7 +29,7 @@
 cd "C:/Users/RaphaelDütsch/OneDrive - abrantix AG/projects/ep2_9"
 
 # Remote-Repository hinzufügen:
-git remote add origin https://github.com/rapdue/ep2_9.git
+git remote add origin https://github.com/rapdue/test-nice-gui.git
 
 # Optional: Branch umbenennen zu 'main' (falls gewünscht):
 git branch -M main
@@ -68,7 +68,7 @@ git push
 
 Nach erfolgreichem Deployment ist Ihre App verfügbar unter:
 ```
-https://rapdue.github.io/ep2_9/
+https://rapdue.github.io/test-nice-gui/
 ```
 
 ### 🔄 Automatische Updates

@@ -17,8 +17,8 @@ Eine einfache Hello World Anwendung erstellt mit [NiceGUI](https://nicegui.io/) 
 
 1. **Klonen Sie das Repository:**
    ```bash
-   git clone https://github.com/rapdue/ep2_9.git
-   cd ep2_9
+   git clone https://github.com/rapdue/test-nice-gui.git
+   cd test-nice-gui
    ```
 
 2. **Virtuelle Umgebung erstellen (empfohlen):**
@@ -114,7 +114,7 @@ Die statische Version wird automatisch bei jedem Push auf `main`/`master` erstel
 
 ### 📍 Live-Demo:
 Nach dem Deployment ist die App verfügbar unter:
-`https://rapdue.github.io/ep2_9/`
+`https://rapdue.github.io/test-nice-gui/`
 
 ## 🤝 Mitwirken
 
