@@ -163,7 +163,7 @@ def build_static():
             <h3>🔧 Lokale Installation & Verwendung</h3>
             <p>Um die echte NiceGUI-App lokal zu starten:</p>
             <pre style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; overflow-x: auto;">
-git clone https://github.com/ihr-username/ep2_9.git
+git clone https://github.com/rapdue/ep2_9.git
 cd ep2_9
 python -m venv .venv
 .venv\\Scripts\\activate  # Windows
@@ -173,7 +173,7 @@ python main.py</pre>
         </div>
         
         <div style="text-align: center; margin: 20px 0;">
-            <a href="https://github.com/ihr-username/ep2_9" class="github-link">
+            <a href="https://github.com/rapdue/ep2_9" class="github-link">
                 📂 Projekt auf GitHub ansehen
             </a>
             <a href="https://nicegui.io/" class="github-link">
@@ -240,10 +240,10 @@ python main.py</pre>
 Diese Seite zeigt eine statische Demo der NiceGUI Hello World Anwendung.
 
 ## 🌐 Live Demo
-[Hier ansehen](https://ihr-username.github.io/ep2_9/)
+[Hier ansehen](https://rapdue.github.io/ep2_9/)
 
 ## 📁 Originales Repository
-Das vollständige NiceGUI-Projekt finden Sie im [Haupt-Repository](https://github.com/ihr-username/ep2_9).
+Das vollständige NiceGUI-Projekt finden Sie im [Haupt-Repository](https://github.com/rapdue/ep2_9).
 
 ## 🚀 Lokale Installation
 Siehe die Anweisungen auf der Demo-Seite oder im Haupt-Repository.

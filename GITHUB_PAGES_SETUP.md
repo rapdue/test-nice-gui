@@ -28,8 +28,8 @@
 # In Ihrem Projektordner (bereits erledigt):
 cd "C:/Users/RaphaelDütsch/OneDrive - abrantix AG/projects/ep2_9"
 
-# Remote-Repository hinzufügen (ersetzen Sie 'ihr-username'):
-git remote add origin https://github.com/ihr-username/ep2_9.git
+# Remote-Repository hinzufügen:
+git remote add origin https://github.com/rapdue/ep2_9.git
 
 # Optional: Branch umbenennen zu 'main' (falls gewünscht):
 git branch -M main
@@ -68,7 +68,7 @@ git push
 
 Nach erfolgreichem Deployment ist Ihre App verfügbar unter:
 ```
-https://ihr-username.github.io/ep2_9/
+https://rapdue.github.io/ep2_9/
 ```
 
 ### 🔄 Automatische Updates
