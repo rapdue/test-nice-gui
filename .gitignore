@@ -166,3 +166,7 @@ cython_debug/
 # NiceGUI may create temporary files
 .nicegui/
 storage/
+
+# Build artifacts
+dist/
+build/
