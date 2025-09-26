@@ -14,8 +14,15 @@ def build_static():
     # Dist-Ordner erstellen
     dist_dir = Path("dist")
     if dist_dir.exists():
-        shutil.rmtree(dist_dir)
-    dist_dir.mkdir()
+        try:
+            shutil.rmtree(dist_dir)
+        except PermissionError:
+            # Fallback für Windows-Probleme
+            import time
+            time.sleep(1)
+            shutil.rmtree(dist_dir, ignore_errors=True)
+    
+    dist_dir.mkdir(exist_ok=True)
     
     # HTML-Template für die statische Seite
     html_content = """<!DOCTYPE html>
@@ -233,6 +240,9 @@ python main.py</pre>
     
     # HTML-Datei schreiben
     (dist_dir / "index.html").write_text(html_content, encoding='utf-8')
+    
+    # .nojekyll Datei für GitHub Pages erstellen
+    (dist_dir / ".nojekyll").write_text("", encoding='utf-8')
     
     # README für GitHub Pages erstellen
     readme_content = """# Hello World NiceGUI - GitHub Pages Demo
