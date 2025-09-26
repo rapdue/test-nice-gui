@@ -18,10 +18,7 @@ import argparse
 from nicegui import ui
 
 # Import the UI construction function from main.py
-from main import main as build_ui  # type: ignore
-
-# Build UI elements (same as local development)
-build_ui()
+import main  # noqa: F401  # stellt sicher, dass die @ui.page Dekorationen registriert werden
 
 def resolve_port() -> int:
     parser = argparse.ArgumentParser(add_help=True)
