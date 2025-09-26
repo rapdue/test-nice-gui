@@ -89,6 +89,33 @@ Die Anwendung ist mit Hot-Reload konfiguriert. Änderungen an `main.py` werden a
 - [NiceGUI Beispiele](https://github.com/zauberzeug/nicegui/tree/main/examples)
 - [Python Virtual Environments](https://docs.python.org/3/tutorial/venv.html)
 
+## 🌐 GitHub Pages Deployment
+
+Dieses Projekt kann automatisch auf GitHub Pages veröffentlicht werden!
+
+### Für öffentliche Repositories (kostenlos):
+1. **Repository auf GitHub erstellen und pushen**
+2. **GitHub Pages aktivieren:**
+   - Gehe zu Repository Settings → Pages
+   - Source: "GitHub Actions" auswählen
+   - Die Workflow-Datei `.github/workflows/deploy.yml` wird automatisch erkannt
+
+### Für private Repositories:
+- Benötigt GitHub Pro, Team oder Enterprise Cloud
+- Gleiche Schritte wie oben
+
+### 🏗️ Build-Prozess:
+```bash
+# Lokaler Build-Test:
+python build_static.py
+```
+
+Die statische Version wird automatisch bei jedem Push auf `main`/`master` erstellt und deployed.
+
+### 📍 Live-Demo:
+Nach dem Deployment ist die App verfügbar unter:
+`https://ihr-username.github.io/ep2_9/`
+
 ## 🤝 Mitwirken
 
 1. Forken Sie das Projekt
