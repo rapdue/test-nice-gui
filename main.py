@@ -56,6 +56,9 @@ def main():
 
 
 if __name__ in {'__main__', '__mp_main__'}:
+    # WICHTIG: main() aufrufen damit Elemente erstellt werden
+    main()
+    print('Starte NiceGUI Server auf http://localhost:8080 ...')
     # Starte die NiceGUI Anwendung
     ui.run(
         title='Hello World NiceGUI',

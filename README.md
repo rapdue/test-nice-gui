@@ -63,6 +63,62 @@ Eine einfache Hello World Anwendung erstellt mit [NiceGUI](https://nicegui.io/) 
    - Klicken Sie auf "Begrüßen"
    - Erkunden Sie die zusätzlichen Informationen
 
+## 🌍 Live (echter) NiceGUI Server starten
+
+Standard `main.py` startet schon den Entwicklungsserver mit Hot-Reload.
+Für Produktionsbetrieb ohne Reload und ohne automatisches Browser-Öffnen kannst du `serve.py` verwenden:
+
+```bash
+python serve.py
+```
+
+Dieser nutzt `host=0.0.0.0`, damit er auch in Containern erreichbar ist.
+
+### Docker Build & Run
+
+```bash
+docker build -t test-nice-gui .
+docker run -p 8080:8080 test-nice-gui
+```
+Dann aufrufen: http://localhost:8080
+
+### Plattformen
+- Render / Railway / Fly.io: Dockerfile direkt verwenden
+- Heroku kompatibel: `Procfile` vorhanden (`web: python serve.py`)
+- Azure / AWS ECS: Port 8080 freigeben
+
+## ☁️ Deployment auf Render
+
+Schnellstart (ohne Änderungen):
+1. Push sicherstellen (Repo aktuell auf GitHub)
+2. Gehe zu https://dashboard.render.com
+3. New + → Web Service
+4. Repository auswählen
+5. Einstellungen:
+   - Environment: Python
+   - Build Command: `pip install --upgrade pip && pip install -r requirements.txt`
+   - Start Command: `python serve.py`
+   - Region: nahe bei dir
+6. Create Web Service
+7. Warten bis Build fertig → Live-URL kopieren
+
+Mit `render.yaml` (Infrastructure as Code):
+1. In Render: New + → Blueprint → GitHub Repo wählen
+2. Deploy → Render liest `render.yaml`
+3. Live deployment nach jedem Push
+
+### Health Check
+Standard `healthCheckPath: /` funktioniert (Root liefert HTML). Falls leer, einfach ein kleines Element oben belassen.
+
+### Logs ansehen
+Render Dashboard → Service → Logs
+
+### Environment Variablen
+Kannst du in Render UI überschreiben (PORT, DEBUG, etc.).
+
+### Custom Domain
+Render Dashboard → Service → Custom Domains → Domain hinzufügen und DNS A/CNAME setzen.
+
 ## 📁 Projektstruktur
 
 ```

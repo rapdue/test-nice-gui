@@ -1,0 +1,21 @@
+# Render service definition for deploying the live NiceGUI server
+# Docs: https://render.com/docs/yaml-spec
+
+services:
+  - type: web
+    name: test-nice-gui
+    env: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python serve.py
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.5
+      - key: PORT
+        value: 8080
+    healthCheckPath: /
+    # Optional: Increase if cold start issues
+    # scaling:
+    #   minInstances: 1
+    #   maxInstances: 1
